@@ -1,13 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
 import React from "react";
+
 import {
   Switch,
   Route,
+  BrowserRouter as  Router
 } from "react-router-dom";
+import { createBrowserHistory } from 'history';
 import Arun from './Arun';
+ 
 
 function App() {
+  const history = createBrowserHistory();
   return (
  
     <div className="App">
@@ -25,8 +30,10 @@ function App() {
           Learn React
         </a>
       </header>
+  
     </div>
- 
+  
+
   );
 }
 

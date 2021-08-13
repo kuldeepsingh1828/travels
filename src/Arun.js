@@ -1,10 +1,9 @@
-import react from 'react';
+import react from 'react'; 
 
-class Welcome extends React.Component {
-    render() {
-      return <h1>Hello, Sir <br/> I hope you are doing well.</h1>;
-    }
-  }
-
-
-  
+export default  function Arun() {
+  return (
+    <div>
+      <h2>Hi Arun</h2>
+    </div>
+  );
+}
