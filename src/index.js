@@ -10,17 +10,22 @@ import {
 } from "react-router-dom";
 import { createBrowserHistory } from 'history';
 import Arun from './Arun';
-import Navbar from './Components/Navbar'
+import Signup from './components/Signup';
+// import Navbar from './components/Navbar'
 
 const history = createBrowserHistory();
 ReactDOM.render(
   <React.StrictMode>
     <Router history={history}>
-      <Navbar />
+      <App />
+
+
       <Switch>
 
         <Route path="/travels/arun" component={Arun} />
         <Route path="/" exact={true} component={App} />
+        <Route path="/signup" exact={true} component={Signup} />
+
       </Switch>
     </Router>
   </React.StrictMode>,
