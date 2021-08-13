@@ -6,23 +6,28 @@ import reportWebVitals from './reportWebVitals';
 import {
   Switch,
   Route,
-  BrowserRouter as  Router
+  BrowserRouter as Router
 } from "react-router-dom";
-import { createBrowserHistory } from 'history'; 
+import { createBrowserHistory } from 'history';
 import Arun from './Arun';
-import Navbar from './Components/Navbar'
+import Signup from './components/Signup';
+// import Navbar from './components/Navbar'
 
 const history = createBrowserHistory();
 ReactDOM.render(
-  <React.StrictMode>  
-      <Router  history={history}>
-      <Navbar/>
-         <Switch>
-       
-          <Route path="/travels/arun"  component={Arun} />
-          <Route path="/" exact={true} component={App}/>
-        </Switch>
-        </Router>
+  <React.StrictMode>
+    <Router history={history}>
+      <App />
+
+
+      <Switch>
+
+        <Route path="/travels/arun" component={Arun} />
+        <Route path="/" exact={true} component={App} />
+        <Route path="/signup" exact={true} component={Signup} />
+
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
