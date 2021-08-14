@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/travels/static/css/main.2ae47eeb.chunk.css",
-    "main.js": "/travels/static/js/main.9137def7.chunk.js",
-    "main.js.map": "/travels/static/js/main.9137def7.chunk.js.map",
+    "main.js": "/travels/static/js/main.ccffdb01.chunk.js",
+    "main.js.map": "/travels/static/js/main.ccffdb01.chunk.js.map",
     "runtime-main.js": "/travels/static/js/runtime-main.74d16303.js",
     "runtime-main.js.map": "/travels/static/js/runtime-main.74d16303.js.map",
-    "static/js/2.7264fe78.chunk.js": "/travels/static/js/2.7264fe78.chunk.js",
-    "static/js/2.7264fe78.chunk.js.map": "/travels/static/js/2.7264fe78.chunk.js.map",
+    "static/js/2.38131f71.chunk.js": "/travels/static/js/2.38131f71.chunk.js",
+    "static/js/2.38131f71.chunk.js.map": "/travels/static/js/2.38131f71.chunk.js.map",
     "static/js/3.3bfa493b.chunk.js": "/travels/static/js/3.3bfa493b.chunk.js",
     "static/js/3.3bfa493b.chunk.js.map": "/travels/static/js/3.3bfa493b.chunk.js.map",
     "index.html": "/travels/index.html",
     "static/css/main.2ae47eeb.chunk.css.map": "/travels/static/css/main.2ae47eeb.chunk.css.map",
-    "static/js/2.7264fe78.chunk.js.LICENSE.txt": "/travels/static/js/2.7264fe78.chunk.js.LICENSE.txt"
+    "static/js/2.38131f71.chunk.js.LICENSE.txt": "/travels/static/js/2.38131f71.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.74d16303.js",
-    "static/js/2.7264fe78.chunk.js",
+    "static/js/2.38131f71.chunk.js",
     "static/css/main.2ae47eeb.chunk.css",
-    "static/js/main.9137def7.chunk.js"
+    "static/js/main.ccffdb01.chunk.js"
   ]
 }
