@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 import { createBrowserHistory } from 'history';
 import Arun from './Arun';
-import Signup from './components/Signup';
+import Signup from './Components/Signup';
 // import Navbar from './components/Navbar'
 
 const history = createBrowserHistory();
