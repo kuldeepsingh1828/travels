@@ -9,14 +9,14 @@ function Signup() {
         password: 123
     }];
 
-    const [signupData, setSignupDate] = useState({
+    const [signupData, setSignupData] = useState({
         name: '',
         email: '',
         password: ''
     });
 
     const handleChange = (event) => {
-        setSignupDate({
+        setSignupData({
             ...signupData,
             [event.target.name]: event.target.value
         });
@@ -30,7 +30,7 @@ function Signup() {
 
         alert("done");
         console.log(dummyData);
-        setSignupDate({
+        setSignupData({
             name: '',
             email: '',
             password: ''
