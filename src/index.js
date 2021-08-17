@@ -12,6 +12,8 @@ import { createBrowserHistory } from 'history';
 import Arun from './Arun';
 import Signup from './Components/Signup';
 import Login from './Components/Login';
+import Product from './Components/Product';
+
 // import Navbar from './components/Navbar'
 
 const history = createBrowserHistory();
@@ -26,7 +28,7 @@ ReactDOM.render(
         <Route path="/travels/arun" component={Arun} />
         <Route path="/login" exact={true} component={Login} />
         <Route path="/signup" exact={true} component={Signup} />
-
+        <Route path="/Product" exact={true} component={Product} />
       </Switch>
     </Router>
   </React.StrictMode>,
