@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 // import { useForm } from "react-hook-form";
 
+const dummyData = [{
+    name: 'a',
+    email: 'a@b.com',
+    password: 123
+}];
 
 function Signup() {
-    const dummyData = [{
-        name: 'a',
-        email: 'a@b.com',
-        password: 123
-    }];
+  
 
     const [signupData, setSignupData] = useState({
         name: '',
@@ -22,9 +23,13 @@ function Signup() {
         });
         console.log('signupData');
         console.log(signupData);
+
+        localStorage.setItem("userData" , JSON.stringify(dummyData));
+
     }
 
-    const formHandler = (event) => {
+    const formHandler = (event) => 
+    {
         event.preventDefault();
         dummyData.push(signupData);
 

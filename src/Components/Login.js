@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
-import users from '../dummy';
+import { useHistory } from 'react-router';
+
+
+const users=  JSON.parse(localStorage.getItem("userData"));
+console.log(users);
+
 function Login() {
+    let history = useHistory();
     const [formdata, setFormdata] = useState({
         'email': '',
         'password': ''
@@ -15,6 +21,7 @@ function Login() {
         });
         if (index != -1) {
             alert('Login Success');
+            history.push("/Product");
         }else{
             alert('Login Not Success');
         }

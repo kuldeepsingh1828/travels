@@ -1,0 +1,7 @@
+category
+price range
+loader
+Favorite button 
+Buy
+Add to cart
+Rating
