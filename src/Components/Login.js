@@ -1,53 +1,46 @@
-import React from 'react';
-class Login extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
-            email: '',
-            password: ''
-        };
-
-        this.handleChangeUsername = this.handleChangeUsername.bind(this);
-        this.handleChangePassword = this.handleChangePassword.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+import React, { useState } from 'react';
+import users from '../dummy';
+function Login() {
+    const [formdata, setFormdata] = useState({
+        'email': '',
+        'password': ''
+    });
+    const handleChange = event => {
+        formdata[event.target.name] = event.target.value;
     }
-
-    handleChangeUsername(event) {
-        this.setState({ email: event.target.value });
-    }
-
-    handleChangePassword(event) {
-        this.setState({ password: event.target.value });
-    }
-
-    handleSubmit(event) {
-        console.log(this.state.email);
+    const handleSubmit = (event) => {
         event.preventDefault();
+        var index = users.findIndex((user) => {
+            return user.email == formdata.email && user.password == formdata.password
+        });
+        if (index != -1) {
+            alert('Login Success');
+        }else{
+            alert('Login Not Success');
+        }
     }
-    render() {
-        return (
-            <>
-                <form onSubmit={this.handleSubmit}>
-                    <div className="container py-4">
-                        <div className="row">
-                            <div className="col-md-6 offset-md-3">
-                                <div className="form-group">
-                                    <label>Email</label>
-                                    <input type="text" className="form-control" onChange={this.handleChangeUsername} />
-                                </div>
-                                <div className="form-group">
-                                    <label>Password</label>
-                                    <input type="password" className="form-control" onChange={this.handleChangePassword} />
-                                </div>
-                                <div className="form-group mt-2">
-                                    <button type="submit" className="btn btn-primary">Login</button>
-                                </div>
+    return (
+        <>
+            <form onSubmit={handleSubmit}>
+                <div className="container py-4">
+                    <div className="row">
+                        <div className="col-md-6 offset-md-3">
+                            <div className="form-group">
+                                <label>Email</label>
+                                <input name="email" type="text" className="form-control" onChange={handleChange} />
+                            </div>
+                            <div className="form-group">
+                                <label>Password</label>
+                                <input name="password" type="password" className="form-control" onChange={handleChange} />
+                            </div>
+                            <div className="form-group mt-2">
+                                <button type="submit" className="btn btn-primary">Login</button>
                             </div>
                         </div>
                     </div>
-                </form>
-            </>
-        );
-    }
+                </div>
+            </form>
+        </>
+    );
 }
 export default Login;
